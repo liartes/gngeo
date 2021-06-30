@@ -1,0 +1,7 @@
+opengl.o: opengl.c \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
+ ../../config.h
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h:
+
+../../config.h:

@@ -1,0 +1,323 @@
+emu.o: emu.c \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
+ ../config.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_main.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_stdinc.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_config.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_platform.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/types.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/features.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/wordsize.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/gnu/stubs.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/types.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/typesizes.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/time.h \
+ /var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include/stddef.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/endian.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/endian.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/select.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/select.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/sigset.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/time.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/sysmacros.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdio.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/libio.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/_G_config.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/wchar.h \
+ /var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include/stdarg.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdio.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdlib.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/waitflags.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/waitstatus.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/xlocale.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/alloca.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdlib-bsearch.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/string.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/string.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/string2.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/strings.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/inttypes.h \
+ /var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include/stdint.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdint.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/wchar.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/ctype.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/iconv.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/begin_code.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/close_code.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_audio.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_error.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_endian.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_mutex.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_thread.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_rwops.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_cdrom.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_cpuinfo.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_events.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_active.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_keyboard.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_keysym.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_mouse.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_video.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_joystick.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_quit.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_loadso.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_timer.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_version.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/timex.h \
+ emu.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_types.h \
+ memory.h \
+ /opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_endian.h \
+ video.h ym2610/2610intf.h ym2610/ym2610.h ym2610/mvs.h ym2610/../timer.h \
+ state.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/zlib.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/zconf.h \
+ /var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include-fixed/limits.h \
+ /var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include-fixed/syslimits.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/limits.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/posix1_lim.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/local_lim.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/linux/limits.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/posix2_lim.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/xopen_lim.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/unistd.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/posix_opt.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/environments.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/confname.h \
+ getopt.h roms.h frame_skip.h pd4990a.h messages.h profiler.h debug.h \
+ timer.h sound.h screen.h list.h neocrypt.h conf.h menu.h event.h
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h:
+
+../config.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_main.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_stdinc.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_config.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_platform.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/types.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/features.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/cdefs.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/wordsize.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/gnu/stubs.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/types.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/typesizes.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/time.h:
+
+/var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include/stddef.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/endian.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/endian.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/byteswap.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/select.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/select.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/sigset.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/time.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/sysmacros.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdio.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/libio.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/_G_config.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/wchar.h:
+
+/var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include/stdarg.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdio.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdlib.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/waitflags.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/waitstatus.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/xlocale.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/alloca.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdlib-bsearch.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/string.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/string.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/string2.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/strings.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/inttypes.h:
+
+/var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include/stdint.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdint.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/wchar.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/ctype.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/iconv.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/begin_code.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/close_code.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_audio.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_error.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_endian.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_mutex.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_thread.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_rwops.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_cdrom.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_cpuinfo.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_events.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_active.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_keyboard.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_keysym.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_mouse.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_video.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_joystick.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_quit.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_loadso.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_timer.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_version.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/timex.h:
+
+emu.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_types.h:
+
+memory.h:
+
+/opt/trimui-toolchain/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL_endian.h:
+
+video.h:
+
+ym2610/2610intf.h:
+
+ym2610/ym2610.h:
+
+ym2610/mvs.h:
+
+ym2610/../timer.h:
+
+state.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/zlib.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/zconf.h:
+
+/var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include-fixed/limits.h:
+
+/var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include-fixed/syslimits.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/limits.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/posix1_lim.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/local_lim.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/linux/limits.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/posix2_lim.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/xopen_lim.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/unistd.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/posix_opt.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/environments.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/confname.h:
+
+getopt.h:
+
+roms.h:
+
+frame_skip.h:
+
+pd4990a.h:
+
+messages.h:
+
+profiler.h:
+
+debug.h:
+
+timer.h:
+
+sound.h:
+
+screen.h:
+
+list.h:
+
+neocrypt.h:
+
+conf.h:
+
+menu.h:
+
+event.h:

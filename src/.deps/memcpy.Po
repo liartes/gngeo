@@ -1,0 +1,4 @@
+memcpy.o: memcpy.S \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h:

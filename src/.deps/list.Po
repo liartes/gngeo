@@ -1,0 +1,91 @@
+list.o: list.c \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
+ ../config.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdlib.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/features.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/wordsize.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/gnu/stubs.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h \
+ /var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include/stddef.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/waitflags.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/waitstatus.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/endian.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/endian.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/types.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/typesizes.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/xlocale.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/types.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/time.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/select.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/select.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/sigset.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/time.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/sysmacros.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/alloca.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdlib-bsearch.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
+ list.h
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h:
+
+../config.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdlib.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/features.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/cdefs.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/wordsize.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/gnu/stubs.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h:
+
+/var/lib/trimui-toolchain/usr/lib/gcc/arm-buildroot-linux-gnueabi/6.1.0/include/stddef.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/waitflags.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/waitstatus.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/endian.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/endian.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/byteswap.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/types.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/typesizes.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/xlocale.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/types.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/time.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/select.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/select.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/sigset.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/time.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/sys/sysmacros.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/alloca.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdlib-bsearch.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h:
+
+list.h:
