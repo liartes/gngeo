@@ -214,8 +214,8 @@ int handle_pdep_event(SDL_Event *event) {
 	switch (event->type) {
 	case SDL_KEYDOWN:
 		switch (event->key.keysym.sym) {
-		//case SDLK_ESCAPE:
-		case SDLK_RCTRL:
+		case SDLK_ESCAPE:
+		//case SDLK_RCTRL:
 			return 1;
 			break;
 		case SDLK_F3:
@@ -526,7 +526,7 @@ int wait_event(void) {
 			//last=GN_RIGHT;
 			//return GN_RIGHT;
 			break;	
-		case SDLK_ESCAPE:
+		case SDLK_RCTRL:
 			joy_state[0][GN_A]=1;
 			//last=GN_A;
 			//return GN_A;

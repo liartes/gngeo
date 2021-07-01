@@ -54,6 +54,8 @@
 #endif
 #include "menu.h"
 #include "event.h"
+#include <dlfcn.h>
+#include <mmenu.h>
 
 int frame;
 int nb_interlace = 256;
@@ -64,6 +66,8 @@ int current_line;
 //extern int lastirq2line;
 //extern int irq2repeat_limit;
 //extern Uint32 irq2pos_value;
+
+static void* mmenu = NULL;
 
 void setup_misc_patch(char *name) {
 
@@ -336,19 +340,70 @@ void main_loop(void) {
 
 		//neo_emu_done=
 		if (handle_event()) {
-			int interp = interpolation;
-			SDL_BlitSurface(buffer, &buf_rect, state_img, &screen_rect);
-			interpolation = 0;
-			if (conf.sound) pause_audio(1);
-			if (run_menu() == 2) {
-				neo_emu_done = 1;/*printf("Unlock audio\n");SDL_UnlockAudio()*/
-				return;
-			} // A bit ugly...
-			if (conf.sound) pause_audio(0);
-			//neo_emu_done = 1;
-			interpolation = interp;
-			reset_frame_skip();
-			reset_event();
+
+			//libmmenu
+			if(mmenu == NULL) {
+				mmenu = dlopen("libmmenu.so", RTLD_LAZY);
+			}
+
+			if (mmenu) {
+				SDL_PauseAudio(1);
+				int savename[512];
+				strcpy(savename, original_rom_name);
+				strcpy(strrchr(savename, '.'), ".00%i"); // ugly but 9 snapshots supported
+				snprintf(save_path, 512, "%s%s", SAVE_DIRECTORY, strrchr(savename, '/') + 1);
+
+				ShowMenu_t ShowMenu = (ShowMenu_t)dlsym(mmenu, "ShowMenu");
+				//MenuReturnStatus status = ShowMenu(rom_path, save_path, screen, kMenuEventKeyDown);
+				MenuReturnStatus status = ShowMenu(original_rom_name, save_path, screen, kMenuEventKeyDown);
+
+				if (status==kStatusExitGame) {
+					SDL_FillRect(screen, NULL, 0x000000);
+				    SDL_UpdateRect(screen, 0, 0, 0, 0);
+				    SDL_Flip(screen);
+					neo_emu_done = 1;/*printf("Unlock audio\n");SDL_UnlockAudio()*/
+					return;
+				}
+				else if (status==kStatusOpenMenu) {
+					int interp = interpolation;
+					SDL_BlitSurface(buffer, &buf_rect, state_img, &screen_rect);
+					interpolation = 0;
+					if (conf.sound) pause_audio(1);
+					if (run_menu() == 2) {
+						neo_emu_done = 1;/*printf("Unlock audio\n");SDL_UnlockAudio()*/
+						return;
+					} // A bit ugly...
+					if (conf.sound) pause_audio(0);
+					//neo_emu_done = 1;
+					interpolation = interp;
+					reset_frame_skip();
+					reset_event();
+				}
+				else if (status>=kStatusLoadSlot) {
+					int slot = status - kStatusLoadSlot;
+					load_state(rom_name, slot);
+				}
+				else if (status>=kStatusSaveSlot) {
+					int slot = status - kStatusSaveSlot;
+					save_state(rom_name, slot);
+				}
+				SDL_PauseAudio(0);
+			}
+			else {
+				int interp = interpolation;
+				SDL_BlitSurface(buffer, &buf_rect, state_img, &screen_rect);
+				interpolation = 0;
+				if (conf.sound) pause_audio(1);
+				if (run_menu() == 2) {
+					neo_emu_done = 1;/*printf("Unlock audio\n");SDL_UnlockAudio()*/
+					return;
+				} // A bit ugly...
+				if (conf.sound) pause_audio(0);
+				//neo_emu_done = 1;
+				interpolation = interp;
+				reset_frame_skip();
+				reset_event();
+			}
 		}
 
 #if 0

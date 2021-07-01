@@ -1643,7 +1643,9 @@ void gn_init_menu(void) {
 GN_MENU_ITEM *gitem;
 main_menu = create_menu(NULL, MENU_BIG, NULL, NULL);
 
-main_menu->item = list_append(
+/*
+ * remove rom browser and load/save state from this menu as MinUI menu do the job
+ * main_menu->item = list_append(
 		main_menu->item,
 		(void*) gn_menu_create_item("Load game", MENU_ACTION, rbrowser_action,
 				NULL));
@@ -1659,10 +1661,10 @@ main_menu->item = list_append(
 		(void*) gn_menu_create_item("Save state", MENU_ACTION,
 				save_state_action, NULL));
 main_menu->nb_elem++;
-
+*/
 main_menu->item = list_append(
 		main_menu->item,
-		(void*) gn_menu_create_item("Option", MENU_ACTION, option_action,
+		(void*) gn_menu_create_item("Options", MENU_ACTION, option_action,
 				NULL));
 main_menu->nb_elem++;
 
@@ -1750,10 +1752,14 @@ yesno_menu->nb_elem++;
 }
 
 Uint32 run_menu(void) {
+
+fprintf(stderr, "run_menu BEGIN");
+
 static Uint32 init = 0;
 int a;
 
 if (init == 0) {
+	fprintf(stderr, "run_menu gn_init_menu");
 	init = 1;
 	gn_init_menu();
 }
@@ -1778,9 +1784,11 @@ if (conf.game == NULL) {
 
 while (1) {
 	main_menu->draw(main_menu); //frame_skip(0);printf("fps: %s\n",fps_str);
-	if ((a = main_menu->event_handling(main_menu)) > 0)
+	if ((a = main_menu->event_handling(main_menu)) > 0){
 		//reset_event();
+		fprintf(stderr, "exiting menu");
 		return a;
+	}
 }
 //reset_event();
 if (conf.game == NULL)

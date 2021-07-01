@@ -94,7 +94,11 @@ emu.o: emu.c \
  /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/environments.h \
  /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/confname.h \
  getopt.h roms.h frame_skip.h pd4990a.h messages.h profiler.h debug.h \
- timer.h sound.h screen.h list.h neocrypt.h conf.h menu.h event.h
+ timer.h sound.h screen.h list.h neocrypt.h conf.h menu.h event.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/dlfcn.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/dlfcn.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/mmenu.h \
+ /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL.h
 
 /var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/stdc-predef.h:
 
@@ -321,3 +325,11 @@ conf.h:
 menu.h:
 
 event.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/dlfcn.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/bits/dlfcn.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/mmenu.h:
+
+/var/lib/trimui-toolchain/usr/arm-buildroot-linux-gnueabi/sysroot/usr/include/SDL/SDL.h:

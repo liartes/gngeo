@@ -135,6 +135,11 @@ void cpu_68k_dpg_step(void);
 void setup_misc_patch(char *name);
 void neogeo_reset(void);
 
+char *original_rom_name;
+char *rom_name;
+char save_path[512];
+const static char SAVE_DIRECTORY[] = "/mnt/SDCARD/Roms/NeoGeo/.gngeo/";
+
 #ifdef ENABLE_PROFILER
 #define PROFILER_START profiler_start
 #define PROFILER_STOP profiler_stop
