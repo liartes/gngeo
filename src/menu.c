@@ -1753,13 +1753,10 @@ yesno_menu->nb_elem++;
 
 Uint32 run_menu(void) {
 
-fprintf(stderr, "run_menu BEGIN");
-
 static Uint32 init = 0;
 int a;
 
 if (init == 0) {
-	fprintf(stderr, "run_menu gn_init_menu");
 	init = 1;
 	gn_init_menu();
 }
@@ -1786,7 +1783,6 @@ while (1) {
 	main_menu->draw(main_menu); //frame_skip(0);printf("fps: %s\n",fps_str);
 	if ((a = main_menu->event_handling(main_menu)) > 0){
 		//reset_event();
-		fprintf(stderr, "exiting menu");
 		return a;
 	}
 }

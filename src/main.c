@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
 
 	//Remove path and extension
     original_rom_name=cf_parse_cmd_line(argc,argv);
-	fprintf(stderr,"original rom name=[%s]\n",original_rom_name);
+	printf("original rom name=[%s]\n",original_rom_name);
 	rom_name = remove_path_and_extension(original_rom_name, '.', '/'); 
 	printf("rom name=[%s]\n",rom_name);
 
