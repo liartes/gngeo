@@ -1,0 +1,49 @@
+-------------------------------------------
+--------- gngeo for Trimui Model S --------
+-------------------------------------------
+0. Requirements
+-------------------------------------------
+Upgraded firmware to 0.105
+MinUI as launcher
+-------------------------------------------
+1. Install
+-------------------------------------------
+Unzip the release ZIP
+
+You must copy your NEOGEO bios files in
+Emus/NEOGEO.pak/bios
+
+Copy the content of the release ZIP + bios
+on your Trimui SD card.
+
+Emus/NEOGEO.pak contains the emulator
+executable and the launch.sh script.
+
+Drop your games (.zip only ) in Roms/NEOGEO
+
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
+  do not rename zip files 
+  or games won't load anymore !
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
+
+Tested with some NEOGEO roms that shipped with 
+the Trimui/Powkiddy, compatibility may vary...
+
+You need to add at least one game to make the
+NEOGEO emulator shows up in MinUI.
+
+Emulator snapshots are stored in the folder :
+Roms/NEOGEO/.gngeo
+-------------------------------------------
+2. Update
+-------------------------------------------
+Copy the content of the release ZIP on
+your Trimui SD card, Depending of your system,
+Say yes to "replace all" or "Merge folders"
+-------------------------------------------
+3. Uninstall
+-------------------------------------------
+Remove folders :
+Emus/NEOGEO.pak
+Roms/NEOGEO
+

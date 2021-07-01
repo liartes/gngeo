@@ -477,15 +477,15 @@ void draw_string(SDL_Surface *dst, GNFONT *f, int x, int y, char *str) {
 }
 
 static void init_back(void) {
-	SDL_Rect dst_r = { 24, 16, 304, 224 };
-	static SDL_Rect screen_rect = { 0, 0, 304, 224 };
+	SDL_Rect dst_r = { 24, 16, 320, 240 };
+	static SDL_Rect screen_rect = { 0, 0, 320, 240 };
 	SDL_BlitSurface(state_img, &screen_rect, menu_back, &dst_r);
 	SDL_BlitSurface(back, NULL, menu_back, &dst_r);
 }
 
 static void draw_back(void) {
-	SDL_Rect dst_r = { 24, 16, 304, 224 };
-	static SDL_Rect screen_rect = { 0, 0, 304, 224 };
+	SDL_Rect dst_r = { 24, 16, 320, 240 };
+	static SDL_Rect screen_rect = { 0, 0, 320, 240 };
 	if (back) {
 		//		SDL_BlitSurface(state_img, &screen_rect, menu_buf, &dst_r);
 		//		SDL_BlitSurface(back, NULL, menu_buf, &dst_r);
@@ -843,10 +843,8 @@ int test_action(GN_MENU_ITEM *self, void *param) {
 
 static int load_state_action(GN_MENU_ITEM *self, void *param) {
 	static Uint32 slot = 0;
-	SDL_Rect dstrect = { 24 + 75, 16 + 66, 304 / 2, 224 / 2 };
-	SDL_Rect dstrect_binding = { 24 + 73, 16 + 64, 304 / 2 + 4, 224 / 2 + 4 };
-	//SDL_Rect dst_r={24,16,304,224};
-	//SDL_Event event;
+	SDL_Rect dstrect = { 24 + 75, 16 + 66, 320 / 2, 240 / 2 };
+	SDL_Rect dstrect_binding = { 24 + 73, 16 + 64, 320 / 2 + 4, 240 / 2 + 4 };
 	SDL_Surface *tmps, *slot_img;
 	char slot_str[32];
 
@@ -878,9 +876,9 @@ static int load_state_action(GN_MENU_ITEM *self, void *param) {
 		draw_string(menu_buf, sfont, ALIGN_CENTER, ALIGN_UP, slot_str);
 
 		if (slot > 0)
-			draw_arrow(ALEFT, 44 + 16, 224 / 2 + 16);
+			draw_arrow(ALEFT, 44 + 16, 240 / 2 + 16);
 		if (slot < nb_slot - 1)
-			draw_arrow(ARIGHT, 304 - 43, 224 / 2 + 16);
+			draw_arrow(ARIGHT, 304 - 43, 240 / 2 + 16);
 
 		SDL_BlitSurface(menu_buf, NULL, buffer, NULL);
 		screen_update();
@@ -917,8 +915,8 @@ static int load_state_action(GN_MENU_ITEM *self, void *param) {
 
 static int save_state_action(GN_MENU_ITEM *self, void *param) {
 	static Uint32 slot = 0;
-	SDL_Rect dstrect = { 24 + 75, 16 + 66, 304 / 2, 224 / 2 };
-	SDL_Rect dstrect_binding = { 24 + 73, 16 + 64, 304 / 2 + 4, 224 / 2 + 4 };
+	SDL_Rect dstrect = { 24 + 75, 16 + 66, 320 / 2, 240 / 2 };
+	SDL_Rect dstrect_binding = { 24 + 73, 16 + 64, 320 / 2 + 4, 240 / 2 + 4 };
 	SDL_Surface *tmps, *slot_img = NULL;
 	char slot_str[32];
 	Uint32 nb_slot = how_many_slot(conf.game);
@@ -948,9 +946,9 @@ static int save_state_action(GN_MENU_ITEM *self, void *param) {
 		draw_string(menu_buf, sfont, ALIGN_CENTER, ALIGN_UP, slot_str);
 
 		if (slot > 0)
-			draw_arrow(ALEFT, 44 + 16, 224 / 2 + 16);
+			draw_arrow(ALEFT, 44 + 16, 240 / 2 + 16);
 		if (slot < nb_slot)
-			draw_arrow(ARIGHT, 304 - 43, 224 / 2 + 16);
+			draw_arrow(ARIGHT, 304 - 43, 240 / 2 + 16);
 
 		SDL_BlitSurface(menu_buf, NULL, buffer, NULL);
 		screen_update();

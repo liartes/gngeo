@@ -236,7 +236,7 @@ SDL_Surface *load_state_img(char *game,int slot) {
 	if ((gzf = open_state(game, slot, STREAD)) == NULL)
 		return NULL;
 
-	gzread(gzf, state_img_tmp->pixels, 304 * 224 * 2);
+	gzread(gzf, state_img_tmp->pixels, 320 * 240 * 2);
 
 
     gzclose(gzf);
@@ -271,7 +271,7 @@ int save_state(char *game,int slot) {
 	if ((gzf = open_state(game, slot, STWRITE)) == NULL)
 		return GN_FALSE;
 
-	gzwrite(gzf, state_img->pixels, 304 * 224 * 2);
+	gzwrite(gzf, state_img->pixels, 320 * 240 * 2);
 
 	neogeo_mkstate(gzf,STWRITE);
 
@@ -295,7 +295,7 @@ int load_state(char *game,int slot) {
 		gn_popup_error("Warning!","You're trying to load an older gngeo save state\nIt may work or not, nobody knows! ;)");
 
 
-	gzread(gzf,state_img_tmp->pixels,304*224*2);
+	gzread(gzf,state_img_tmp->pixels,320*240*2);
 
 	neogeo_mkstate(gzf,STREAD);
 
@@ -373,9 +373,9 @@ void neogeo_init_save_state(void) {
     int i;
 
     if (!state_img)
-		state_img=SDL_CreateRGBSurface(SDL_SWSURFACE,304, 224, 16, 0xF800, 0x7E0, 0x1F, 0);
+		state_img=SDL_CreateRGBSurface(SDL_SWSURFACE,320, 240, 16, 0xF800, 0x7E0, 0x1F, 0);
 	if (!state_img_tmp)
-		state_img_tmp=SDL_CreateRGBSurface(SDL_SWSURFACE,304, 224, 16, 0xF800, 0x7E0, 0x1F, 0);
+		state_img_tmp=SDL_CreateRGBSurface(SDL_SWSURFACE,320, 240, 16, 0xF800, 0x7E0, 0x1F, 0);
 
     
 }

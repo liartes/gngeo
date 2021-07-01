@@ -199,7 +199,7 @@ int screen_init() {
 		visible_area.x = 16;
 		visible_area.y = 16;
 		visible_area.w = 320;
-		visible_area.h = 224;
+		visible_area.h = 240;
 
 
 	/* Initialization of some variables */
@@ -212,8 +212,8 @@ int screen_init() {
 	nblitter = get_blitter_by_name(CF_STR(cf_blitter));
 	neffect = get_effect_by_name(CF_STR(cf_effect));
 	fullscreen = CF_BOOL(cf_fs);
-	conf.res_x = 304;
-	conf.res_y = 224;
+	conf.res_x = 320;
+	conf.res_y = 240;
 
 	if (CF_VAL(cf_scale) == 0)
 		scale = 1;
@@ -315,7 +315,7 @@ int screen_reinit(void) {
 		visible_area.x = 16;
 		visible_area.y = 16;
 		visible_area.w = 320;
-		visible_area.h = 224;
+		visible_area.h = 240;
 
 	/* Initialization of some variables */
 	/*
@@ -325,8 +325,8 @@ int screen_reinit(void) {
 	 */
 	interpolation = CF_BOOL(cf_get_item_by_name("interpolation"));
 	fullscreen = CF_BOOL(cf_get_item_by_name("fullscreen"));
-	conf.res_x = 304;
-	conf.res_y = 224;
+	conf.res_x = 320;
+	conf.res_y = 240;
 
 	if (CF_VAL(cf_get_item_by_name("scale")) == 0)
 		scale = 1;
@@ -354,7 +354,7 @@ static inline void do_interpolation() {
 	do_inner_interpolation_i386(dst, src);
 #else
 	/* we copy pixels from buffer surface to blend surface */
-	for (w = 224; w > 0; w--) {
+	for (w = 240; w > 0; w--) {
 		for (h = 160; h > 0; h--) {
 			s = *(Uint32 *) src;
 			d = *(Uint32 *) dst;
@@ -376,8 +376,9 @@ static inline void do_interpolation() {
 	buffer = tmp;
 }
 
-static SDL_Rect left_border={16,16,8,224};
-static SDL_Rect right_border={16+312,16,8,224};
+static SDL_Rect left_border={16,16,8,240};
+static SDL_Rect right_border={16+312,16,8,240};
+static SDL_Rect bottom_border={16, 16+224, 320, 16};
 
 
 void screen_update() {
@@ -386,6 +387,7 @@ void screen_update() {
 	if (!conf.screen320) {
 		SDL_FillRect(buffer, &left_border, 0);
 		SDL_FillRect(buffer, &right_border, 0);
+		SDL_FillRect(buffer, &bottom_border, 0);
 	}
 
 
