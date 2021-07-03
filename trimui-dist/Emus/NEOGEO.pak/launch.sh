@@ -15,4 +15,4 @@ SDL_NOMOUSE=1
 
 needs-swap
 
-"$EMU_DIR/$EMU_EXE" "-B" "$BIOSPATH" "-i" "$ROM_DIR" "$ROM" &> "/mnt/SDCARD/.minui/logs/$EMU_NAME.txt"
+"$EMU_DIR/$EMU_EXE" "-i" "$ROM_DIR" "$ROM" &> "/mnt/SDCARD/.minui/logs/$EMU_NAME.txt"

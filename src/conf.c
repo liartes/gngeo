@@ -81,8 +81,7 @@ static char *default_p2control = "....";
 #else
 //static char * default_p1control = "A=K119,B=K120,C=K113,D=K115,START=K38,COIN=K34,UP=K273,DOWN=K274,LEFT=K276,RIGHT=K275,MENU=K27";
 //static char * default_p1control = "A=K306,B=K308,C=K32,D=K304,START=K13,COIN=K27,UP=K273,DOWN=K274,LEFT=K276,RIGHT=K275,MENU=K305";
-static char * default_p1control = "A=K306,B=K308,C=K32,D=K304,START=K13,COIN=K305,UP=K273,DOWN=K274,LEFT=K276,RIGHT=K275,MENU=K27";
-
+static char * default_p1control = "A=K306,B=K32,C=K308,D=K304,START=K13,COIN=K305,UP=K273,DOWN=K274,LEFT=K276,RIGHT=K275,MENU=K27";
 static char * default_p2control = "";
 #endif
 

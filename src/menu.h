@@ -66,7 +66,7 @@ int gn_menu_delete_item(GN_MENU_ITEM *menu);
 
 int gn_init_skin(void);
 int gn_loop_menu(GN_MENU *m);
-Uint32 run_menu(void);
+Uint32 run_menu(int libmmenu);
 void gn_reset_pbar(void);
 void gn_init_pbar(char *name,int size);
 void gn_update_pbar(int pos);
