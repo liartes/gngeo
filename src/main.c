@@ -123,7 +123,7 @@ int main(int argc, char *argv[])
 /* Launch the specified game, or the rom browser if no game was specified*/
 	if (!rom_name) {
 	//	rom_browser_menu();
-		run_menu(0);
+		run_menu();
 		printf("GAME %s\n",conf.game);
 		if (conf.game==NULL) return 0;
 	} else {

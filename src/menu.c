@@ -1637,20 +1637,19 @@ while (1) {
 return 0;
 }
 
-void gn_init_menu(int libmmenu) {
+void gn_init_menu(void) {
 GN_MENU_ITEM *gitem;
 main_menu = create_menu(NULL, MENU_BIG, NULL, NULL);
 
 /*
- * remove rom browser and load/save state from this menu as MinUI menu do the job
- */
-if(libmmenu == 0) {
+ * remove rom browser from this menu
+ *
 	main_menu->item = list_append(
 			main_menu->item,
 			(void*) gn_menu_create_item("Load game", MENU_ACTION, rbrowser_action,
 					NULL));
 	main_menu->nb_elem++;
-
+*/
 	main_menu->item = list_append(
 			main_menu->item,
 			(void*) gn_menu_create_item("Load state", MENU_ACTION,
@@ -1661,7 +1660,6 @@ if(libmmenu == 0) {
 			(void*) gn_menu_create_item("Save state", MENU_ACTION,
 					save_state_action, NULL));
 	main_menu->nb_elem++;
-}
 
 main_menu->item = list_append(
 		main_menu->item,
@@ -1752,14 +1750,14 @@ yesno_menu->item = list_append(yesno_menu->item, (void*) gitem);
 yesno_menu->nb_elem++;
 }
 
-Uint32 run_menu(int libmmenu) {
+Uint32 run_menu(void) {
 
 static Uint32 init = 0;
 int a;
 
 if (init == 0) {
 	init = 1;
-	gn_init_menu(libmmenu);
+	gn_init_menu();
 }
 
 init_back();
