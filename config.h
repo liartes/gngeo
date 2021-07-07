@@ -74,6 +74,7 @@
 
 /* Define to 1 if you have the `mmap' function. */
 /* #undef HAVE_MMAP */
+#define HAVE_MMAP 1
 
 /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
 /* #undef HAVE_NDIR_H */
