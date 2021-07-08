@@ -1375,7 +1375,8 @@ int dr_load_roms(GAME_ROMS *r, char *rom_path, char *name) {
 	int romsize;
 
 	char *bios_path = CF_STR(cf_get_item_by_name("biospath"));
-	if(bios_path == NULL) {
+	// replace default value with rom_path for retro-compatibility
+	if(strcmp (bios_path, "./roms") == 0 ) {
 		bios_path = rom_path;
 	}
 
