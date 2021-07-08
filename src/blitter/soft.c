@@ -62,7 +62,7 @@ blitter_soft_init()
 
 	} else {
 		height=visible_area.h;
-		screen_rect.y = 0;
+		screen_rect.y = 8;
 		yscreenpadding=0;
 	}
 
