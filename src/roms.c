@@ -138,6 +138,7 @@ int bankoffset_kof2000[64] = {
 Uint8 scramblecode_kof2000[7] = {0xEC, 15, 14, 7, 3, 10, 5,};
 
 #define LOAD_BUF_SIZE (128*1024)
+
 static Uint8* iloadbuf = NULL;
 
 //char romerror[1024];
@@ -1211,6 +1212,7 @@ void convert_all_char(Uint8 *Ptr, int Taille,
 }
 
 static int init_roms(GAME_ROMS *r) {
+
 	int i = 0;
 	//printf("INIT ROM %s\n",r->info.name);
 	neogeo_fix_bank_type = 0;
@@ -1228,6 +1230,7 @@ static int init_roms(GAME_ROMS *r) {
 		i++;
 	}
 	DEBUG_LOG("Default roms init\n");
+
 	return 0;
 }
 
@@ -1238,7 +1241,10 @@ int dr_load_bios(GAME_ROMS *r) {
 	ZFILE *z;
 	size_t totread = 0;
 	unsigned int size;
-	char *rpath = CF_STR(cf_get_item_by_name("rompath"));
+	char *rpath = CF_STR(cf_get_item_by_name("biospath"));
+	if(rpath == NULL) {
+		*rpath = CF_STR(cf_get_item_by_name("rompath"));
+	}
 	char *fpath;
 	const char *romfile;
 	fpath = malloc(strlen(rpath) + strlen("neogeo.zip") + 2);
@@ -1368,10 +1374,16 @@ int dr_load_roms(GAME_ROMS *r, char *rom_path, char *name) {
 	int i;
 	int romsize;
 
+	char *bios_path = CF_STR(cf_get_item_by_name("biospath"));
+	if(bios_path == NULL) {
+		bios_path = rom_path;
+	}
+
 	memset(r, 0, sizeof (GAME_ROMS));
 
 	drv = res_load_drv(name);
 	if (!drv) {
+
 		gn_set_error_msg("Can't find rom driver for %s\n", name);
 
 		return GN_FALSE;
@@ -1386,7 +1398,16 @@ int dr_load_roms(GAME_ROMS *r, char *rom_path, char *name) {
 	/* Open Parent.
 	 For now, only one parent is supported, no recursion
 	 */
-	gzp = open_rom_zip(rom_path, drv->parent);
+
+	/*
+	 * in case driver parent is neogeo.zip, use biospath instead of rompath
+	 */
+	if(strcmp ("neogeo", drv->parent) == 0) {
+		gzp = open_rom_zip(bios_path, drv->parent);
+	}
+	else {
+		gzp = open_rom_zip(rom_path, drv->parent);
+	}
 	if (gzp == NULL) {
 		gn_set_error_msg("Parent %s/%s.zip not found\n", rom_path, name);
 		return GN_FALSE;
