@@ -11,7 +11,7 @@
 #include "emu.h"
 #include "memory.h"
 //#include "unzip.h"
-#if defined(HAVE_LIBZ)// && defined (HAVE_MMAP)
+#if defined(HAVE_LIBZ) && defined (HAVE_MMAP)
 #include "zlib.h"
 #endif
 #include "unzip.h"

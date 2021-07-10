@@ -15,8 +15,8 @@ SDL_NOMOUSE=1
 
 needs-swap
 #BIOS in the Roms folder
-#"$EMU_DIR/$EMU_EXE" "--screen320" "-i" "$ROM_DIR" "$ROM" &> "/mnt/SDCARD/.minui/logs/$EMU_NAME.txt"
+#"$EMU_DIR/$EMU_EXE" "-i" "$ROM_DIR" "$ROM" &> "/mnt/SDCARD/.minui/logs/$EMU_NAME.txt"
 
 #BIOS in the .pak/bios folder
-"$EMU_DIR/$EMU_EXE" "-B" "$BIOSPATH" "--screen320" "-i" "$ROM_DIR" "$ROM" &> "/mnt/SDCARD/.minui/logs/$EMU_NAME.txt"
+"$EMU_DIR/$EMU_EXE" "-B" "$BIOSPATH" "-i" "$ROM_DIR" "$ROM" &> "/mnt/SDCARD/.minui/logs/$EMU_NAME.txt"
 
