@@ -381,18 +381,17 @@ static SDL_Rect right_border={16+312,16,8,240};
 static SDL_Rect top_border={16, 8, 320, 8};
 static SDL_Rect bottom_border={16, 8+8+224, 320, 8};
 
-
 void screen_update() {
 	if (interpolation == 1)
 		do_interpolation();
-	if (!conf.screen320) {
+
+	if(!conf.screen320) {
 		SDL_FillRect(buffer, &left_border, 0);
 		SDL_FillRect(buffer, &right_border, 0);
-		SDL_FillRect(buffer, &top_border, 0);
-		SDL_FillRect(buffer, &bottom_border, 0);
 	}
 
-
+	SDL_FillRect(buffer, &top_border, 0);
+	SDL_FillRect(buffer, &bottom_border, 0);
 
 	if (effect[neffect].update != NULL)
 		(*effect[neffect].update) ();

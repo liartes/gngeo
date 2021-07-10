@@ -10,7 +10,7 @@ MinUI as launcher
 -------------------------------------------
 Unzip the release ZIP
 
-You must copy your NEOGEO bios files in
+You must copy your NEOGEO bios (neogeo.zip) in
 Emus/NEOGEO.pak/bios
 
 Copy the content of the release ZIP + bios
