@@ -68,6 +68,7 @@ int current_line;
 //extern Uint32 irq2pos_value;
 
 static void* mmenu = NULL;
+static int resume_slot = -1;
 
 void setup_misc_patch(char *name) {
 
@@ -335,16 +336,26 @@ void main_loop(void) {
 
 	//pause_audio(0);
 	while (!neo_emu_done) {
+		//libmmenu
+		if(mmenu == NULL) {
+			mmenu = dlopen("libmmenu.so", RTLD_LAZY);
+		}
+
+		if (mmenu) {
+			ResumeSlot_t ResumeSlot = (ResumeSlot_t)dlsym(mmenu, "ResumeSlot");
+			if (ResumeSlot) resume_slot = ResumeSlot();
+
+			if (resume_slot!=-1) {
+				load_state(rom_name, resume_slot);
+				resume_slot = -1;
+			}
+		}
+
 		if (conf.test_switch == 1)
 			conf.test_switch = 0;
 
 		//neo_emu_done=
 		if (handle_event()) {
-
-			//libmmenu
-			if(mmenu == NULL) {
-				mmenu = dlopen("libmmenu.so", RTLD_LAZY);
-			}
 
 			if (mmenu) {
 				SDL_PauseAudio(1);
